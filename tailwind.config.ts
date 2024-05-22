@@ -33,6 +33,7 @@ const config: Config = {
           flex: "1 1 auto",
         },
         "._container": {
+          maxWidth: "1870px",
           margin: "0 auto",
           padding: "0 25px",
         },
