@@ -10,7 +10,7 @@ export default function Header() {
   ];
 
   return (
-    <div className="absolute left-0 right-0 py-5">
+    <div className="py-5">
       <div className="_container flex items-center justify-between">
         <Logo className="text-[#1a1b1d]" />
         <ul className="flex items-center font-medium text-[17px] leading-[94%] tracking-[-0.01em] text-[#1a1b1d]">
