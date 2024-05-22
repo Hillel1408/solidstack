@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Button } from "@/components";
+import { Button, Logo } from "@/components";
 
 export default function Header() {
   const list = [
@@ -13,12 +12,7 @@ export default function Header() {
   return (
     <div className="absolute left-0 right-0 py-5">
       <div className="_container flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Image src="img/logo.svg" width={65} height={58} alt="" />
-          <span className="font-medium text-[18px] leading-[89%] tracking-[-0.01em] text-[#1a1b1d]">
-            Solidstack
-          </span>
-        </div>
+        <Logo className="text-[#1a1b1d]" />
         <ul className="flex items-center font-medium text-[17px] leading-[94%] tracking-[-0.01em] text-[#1a1b1d]">
           {list.map((item, index) => (
             <li key={index}>

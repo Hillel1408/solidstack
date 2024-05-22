@@ -1,6 +1,19 @@
-export default function Button({ text }: { text: string }) {
+import classNames from "classnames";
+
+export default function Button({
+  text,
+  className,
+}: {
+  text: string;
+  className?: string;
+}) {
   return (
-    <button className="py-[10px] px-[20px] font-medium text-[19px] leading-[95%] tracking-[-0.01em] lowercase text-white bg-[linear-gradient(356deg,#ffa8a3_0%,#ff291c_73%,#ff291c_100%)]">
+    <button
+      className={classNames(
+        "py-[10px] px-[20px] font-medium text-[19px] leading-[95%] tracking-[-0.01em] lowercase text-white bg-[linear-gradient(356deg,#ffa8a3_0%,#ff291c_73%,#ff291c_100%)]",
+        className
+      )}
+    >
       {text}
     </button>
   );
