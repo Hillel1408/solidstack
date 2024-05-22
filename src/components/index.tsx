@@ -4,5 +4,6 @@ import Button from "@/components/Button/Button";
 import Logo from "@/components/Logo/Logo";
 import Form from "@/components/Form/Form";
 import WeDoIt from "@/components/WeDoIt/WeDoIt";
+import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
 
-export { Header, Footer, Button, Logo, Form, WeDoIt };
+export { Header, Footer, Button, Logo, Form, WeDoIt, WhatWeDo };
