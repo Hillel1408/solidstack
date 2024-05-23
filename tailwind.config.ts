@@ -11,7 +11,7 @@ const config: Config = {
     screens: {
       lg: { max: "1440px" },
       md: { max: "768px" },
-      sm: { max: "375px" },
+      sm: { max: "500px" },
     },
     extend: {},
   },
@@ -38,7 +38,14 @@ const config: Config = {
           padding: "0 25px",
         },
         "@media (max-width: 1440px)": {
-          html: {},
+          "._container": {
+            padding: "0 20px",
+          },
+        },
+        "@media (max-width: 500px)": {
+          "._container": {
+            padding: "0 15px",
+          },
         },
       });
     }),

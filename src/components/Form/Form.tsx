@@ -2,7 +2,7 @@ import { Button } from "@/components";
 
 export default function Form() {
   return (
-    <div className="">
+    <div className="bg">
       <div className="_container pt-[150px] pb-[90px] grid grid-cols-[1fr_1fr]">
         <div>
           <h2 className="flex gap-[22px] uppercase font-medium text-[45px] leading-[98%] mb-[90px]">
@@ -29,22 +29,22 @@ export default function Form() {
           <input
             type="text"
             placeholder="your name"
-            className="h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
           />
           <input
             type="email"
             placeholder="your e-mail"
-            className="h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
           />
           <input
             type="text"
             placeholder="subject"
-            className="h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
           />
           <input
             type="text"
             placeholder="type your message here"
-            className="h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
           />
           <div className="flex justify-between items-center">
             <p className="font-medium text-[15px] leading-[157%] text-[#929298]">

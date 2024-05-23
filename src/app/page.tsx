@@ -11,13 +11,13 @@ import {
 export default function Home() {
   return (
     <main className="">
-      <Intro />
+      {/* <Intro />
       <Partners />
       <WhatWeDo />
       <WeDoIt />
       <Team />
       <WhyWeDoIt />
-      <Form />
+      <Form /> */}
     </main>
   );
 }
