@@ -16,8 +16,8 @@ export default function Home() {
       <WhatWeDo />
       {/* <WeDoIt />
       <Team />
-      <WhyWeDoIt />
-      <Form /> */}
+      <WhyWeDoIt /> */}
+      <Form />
     </main>
   );
 }
