@@ -8,6 +8,7 @@ import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
 import Team from "@/components/Team/Team";
 import Intro from "@/components/Intro/Intro";
 import Partners from "@/components/Partners/Partners";
+import WhyWeDoIt from "@/components/WhyWeDoIt/WhyWeDoIt";
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   Team,
   Intro,
   Partners,
+  WhyWeDoIt,
 };

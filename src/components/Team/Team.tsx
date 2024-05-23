@@ -1,6 +1,6 @@
 export default function Team() {
   return (
-    <div className="py-[150px]">
+    <div className="bg py-[150px]">
       <div className="_container">
         <h2 className="flex gap-[22px] uppercase font-medium text-[45px] leading-[98%] mb-[26px]">
           <span className="text-[#1a1b1d] underline">WHO</span>

@@ -1,4 +1,12 @@
-import { Form, WeDoIt, WhatWeDo, Team, Intro, Partners } from "@/components";
+import {
+  Form,
+  WeDoIt,
+  WhatWeDo,
+  Team,
+  Intro,
+  Partners,
+  WhyWeDoIt,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -8,6 +16,7 @@ export default function Home() {
       <WhatWeDo />
       <WeDoIt />
       <Team />
+      <WhyWeDoIt />
       <Form />
     </main>
   );
