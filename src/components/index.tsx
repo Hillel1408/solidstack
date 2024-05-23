@@ -7,5 +7,17 @@ import WeDoIt from "@/components/WeDoIt/WeDoIt";
 import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
 import Team from "@/components/Team/Team";
 import Intro from "@/components/Intro/Intro";
+import Partners from "@/components/Partners/Partners";
 
-export { Header, Footer, Button, Logo, Form, WeDoIt, WhatWeDo, Team, Intro };
+export {
+  Header,
+  Footer,
+  Button,
+  Logo,
+  Form,
+  WeDoIt,
+  WhatWeDo,
+  Team,
+  Intro,
+  Partners,
+};
