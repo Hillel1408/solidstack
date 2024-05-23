@@ -14,8 +14,8 @@ export default function Home() {
       <Intro />
       {/* <Partners /> */}
       <WhatWeDo />
-      {/* <WeDoIt />
-      <Team />
+      <WeDoIt />
+      {/* <Team />
       <WhyWeDoIt /> */}
       <Form />
     </main>

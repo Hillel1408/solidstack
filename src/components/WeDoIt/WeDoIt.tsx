@@ -21,28 +21,32 @@ export default function WeDoIt() {
   ];
 
   return (
-    <div className="bg-[#f6f6f6] py-[100px]">
+    <div className="bg-[#f6f6f6] py-[100px] md:py-10">
       <div className="_container">
-        <h2 className="flex gap-[22px] uppercase font-medium text-[45px] leading-[98%] mb-[90px]">
+        <h2 className="flex gap-[22px] uppercase font-medium text-[45px] leading-[98%] mb-[90px] lg:text-[41px] md:text-[27px] md:mb-[37px] sm:mb-[27px]">
           <span className="text-[#1a1b1d] underline">How</span>
           <span className="text-[#929298]">WE DO IT</span>
         </h2>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-10 lg:gap-[54px]">
           {list.map((item, index) => (
             <div
               key={index}
               className={classNames(
-                "grid gap-[33px] grid-cols-[288px_335px]",
-                index % 2 === 0 && "self-end",
-                index === 2 && "mr-[335px]"
+                "grid gap-[33px] grid-cols-[288px_335px] md:grid-cols-[220px_1fr] sm:grid-cols-[1fr]",
+                index % 2 === 0 && "self-end md:self-start",
+                index === 2 && "mr-[335px] lg:mr-0"
               )}
             >
-              <Image src={`/img/${item.img}`} width={288} height={148} alt="" />
+              <img
+                src={`/img/${item.img}`}
+                className="w-[288px] h-[148px] md:w-[220px] md:h-[113px] sm:w-full sm:h-auto"
+                alt=""
+              />
               <div className="-translate-y-[1px]">
-                <h3 className="font-medium text-[55px] leading-[90%] uppercase text-[#000] mb-[22px]">
+                <h3 className="font-medium text-[55px] leading-[90%] uppercase text-[#000] mb-[22px] md:text-[30px]">
                   {item.title}
                 </h3>
-                <p className="font-medium text-[20px] leading-[120%] uppercase text-[#000]">
+                <p className="font-medium text-[20px] leading-[120%] uppercase text-[#000] md:text-[12px]">
                   {item.text}
                 </p>
               </div>
