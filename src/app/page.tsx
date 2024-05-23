@@ -11,8 +11,8 @@ import {
 export default function Home() {
   return (
     <main className="">
-      {/* <Intro />
-      <Partners />
+      <Intro />
+      {/* <Partners />
       <WhatWeDo />
       <WeDoIt />
       <Team />
