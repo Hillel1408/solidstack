@@ -12,10 +12,10 @@ export default function Home() {
   return (
     <main className="">
       <Intro />
-      {/* <Partners /> */}
+      <Partners />
       <WhatWeDo />
       <WeDoIt />
-      {/* <Team /> */}
+      <Team />
       <WhyWeDoIt />
       <Form />
     </main>

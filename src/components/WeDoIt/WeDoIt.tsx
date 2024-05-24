@@ -32,7 +32,7 @@ export default function WeDoIt() {
             <div
               key={index}
               className={classNames(
-                "grid gap-[33px] grid-cols-[288px_335px] md:grid-cols-[220px_1fr] sm:grid-cols-[1fr]",
+                "grid gap-[33px] grid-cols-[288px_335px] md:grid-cols-[220px_1fr] sm:grid-cols-[1fr] sm:w-full",
                 index % 2 === 0 && "self-end md:self-start",
                 index === 2 && "mr-[335px] lg:mr-0"
               )}

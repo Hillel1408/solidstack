@@ -10,15 +10,18 @@ export default function Partners() {
   ];
 
   return (
-    <div className="bg-[#0E0E0E] py-10">
-      <div className="_container flex justify-between">
-        <ul className="flex gap-[75px] text-[15px] leading-[96%] uppercase text-white">
+    <div className="bg-[#0E0E0E] py-10 lg:py-[26px] md:pb-[22px] relative">
+      <div className="_container flex justify-between items-center">
+        <ul
+          className="flex gap-[75px] text-[15px] leading-[96%] uppercase text-white lg:text-[11px] lg:gap-[40px] lg:absolute lg:left-0 lg:right-0
+          lg:top-0 lg:justify-center lg:-translate-y-[36px] lg:text-[#929298] md:gap-[22px] sm:text-[10px]"
+        >
           {list.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <div className="flex gap-[75px]">
-          <span className="text-[15px] leading-[96%] uppercase text-white">
+        <div className="flex gap-[75px] items-center lg:gap-[63px] lg:mx-auto md:overflow-auto md:pb-1">
+          <span className="text-[15px] leading-[96%] uppercase text-white lg:text-[11px] md:hidden">
             our clients:
           </span>
           {logo.map((item, index) => (
@@ -28,6 +31,7 @@ export default function Partners() {
               width={item.width}
               height={item.height}
               alt=""
+              className="lg:scale-[80%]"
             />
           ))}
         </div>
