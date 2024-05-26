@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { Observer } from "@/components";
 import Image from "next/image";
 
@@ -36,7 +35,7 @@ export default function WhatWeDo() {
           <span className="text-[#1a1b1d] underline">WHAT</span>
           <span className="text-[#929298]">WE DO</span>
         </h2>
-        <div className="grid gap-[66px] grid-cols-[1fr_1fr_1fr] lg:gap-[60px] md:grid-cols-[1fr_1fr] sm:grid-cols-[1fr]">
+        <div className="grid gap-[66px] grid-cols-[1fr_1fr_1fr] overflow-hidden lg:gap-[60px] md:grid-cols-[1fr_1fr] sm:grid-cols-[1fr]">
           {list.map((item, index) => (
             <Observer key={index}>
               <div className="grid gap-5 grid-cols-[1fr_215px] lg:grid-cols-[1fr] sm:grid-cols-[140px_1fr] sm:gap-2 sm:items-start">

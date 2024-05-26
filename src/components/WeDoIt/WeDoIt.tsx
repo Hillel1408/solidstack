@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import Image from "next/image";
+import { Observer } from "@/components";
 
 export default function WeDoIt() {
   const list = [
@@ -27,30 +27,36 @@ export default function WeDoIt() {
           <span className="text-[#1a1b1d] underline">How</span>
           <span className="text-[#929298]">WE DO IT</span>
         </h2>
-        <div className="flex flex-col gap-10 lg:gap-[54px]">
+        <div className="flex flex-col gap-10 overflow-hidden lg:gap-[54px]">
           {list.map((item, index) => (
-            <div
+            <Observer
               key={index}
               className={classNames(
-                "grid gap-[33px] grid-cols-[288px_335px] md:grid-cols-[220px_1fr] sm:grid-cols-[1fr] sm:w-full",
+                "sm:w-full",
                 index % 2 === 0 && "self-end md:self-start",
                 index === 2 && "mr-[335px] lg:mr-0"
               )}
             >
-              <img
-                src={`/img/${item.img}`}
-                className="w-[288px] h-[148px] md:w-[220px] md:h-[113px] sm:w-full sm:h-auto"
-                alt=""
-              />
-              <div className="-translate-y-[1px]">
-                <h3 className="font-medium text-[55px] leading-[90%] uppercase text-[#000] mb-[22px] md:text-[30px]">
-                  {item.title}
-                </h3>
-                <p className="font-medium text-[20px] leading-[120%] uppercase text-[#000] md:text-[12px]">
-                  {item.text}
-                </p>
+              <div
+                className={classNames(
+                  "grid gap-[33px] grid-cols-[288px_335px] md:grid-cols-[220px_1fr] sm:grid-cols-[1fr]"
+                )}
+              >
+                <img
+                  src={`/img/${item.img}`}
+                  className="w-[288px] h-[148px] md:w-[220px] md:h-[113px] sm:w-full sm:h-auto"
+                  alt=""
+                />
+                <div className="-translate-y-[1px]">
+                  <h3 className="font-medium text-[55px] leading-[90%] uppercase text-[#000] mb-[22px] md:text-[30px]">
+                    {item.title}
+                  </h3>
+                  <p className="font-medium text-[20px] leading-[120%] uppercase text-[#000] md:text-[12px]">
+                    {item.text}
+                  </p>
+                </div>
               </div>
-            </div>
+            </Observer>
           ))}
         </div>
       </div>

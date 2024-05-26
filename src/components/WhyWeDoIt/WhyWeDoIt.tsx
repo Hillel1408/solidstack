@@ -63,7 +63,6 @@ export default function WhyWeDoIt() {
             />
           )}
         </div>
-        {/* style={{ transform: `translate(0%, ${translateValue}%)` }} */}
         <div
           style={{ transform: `translate(0%, ${translateValue}%)` }}
           className="absolute -left-[300px] top-[340px] lg:top-[330px] md:left-0 md:right-0 md:top-[490px] sm:top-[590px]"

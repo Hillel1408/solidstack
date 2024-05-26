@@ -1,8 +1,15 @@
 "use client";
 
+import classNames from "classnames";
 import { useEffect, useRef } from "react";
 
-export default function Observer({ children }: { children: JSX.Element }) {
+export default function Observer({
+  children,
+  className,
+}: {
+  children: JSX.Element;
+  className?: string;
+}) {
   const myRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -18,7 +25,10 @@ export default function Observer({ children }: { children: JSX.Element }) {
   }, []);
 
   return (
-    <div ref={myRef} className="duration-1000 translate-y-[100%]">
+    <div
+      ref={myRef}
+      className={classNames("duration-1000 translate-y-[100%]", className)}
+    >
       {children}
     </div>
   );
