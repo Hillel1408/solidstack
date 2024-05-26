@@ -6,7 +6,7 @@ export default function Intro() {
           <h2 className="animation-1 font-medium text-[55px] leading-[80%] uppercase text-[#929298] lg:text-[41px] md:text-[35px] sm:text-[31px]">
             engineered{" "}
             <span
-              className="animation-2 text-[#000] relative before:content-[''] before:block before:h-[3px] before:w-full before:bg-[#1a1b1d] before:absolute
+              className="text-[#000] relative before:content-[''] before:block before:h-[3px] before:w-full before:bg-[#1a1b1d] before:absolute
               before:bottom-0 before:left-0"
             >
               to fit
