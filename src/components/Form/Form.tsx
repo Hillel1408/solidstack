@@ -1,6 +1,22 @@
+"use client";
+
+import { useState } from "react";
 import { Button } from "@/components";
 
 export default function Form() {
+  const initialState = {
+    name: "",
+    email: "",
+    subject: "",
+    typeMessage: "",
+  };
+  const [values, setValues] = useState(initialState);
+
+  const onSubmin = () => {
+    console.log(values);
+    setValues(initialState);
+  };
+
   return (
     <div className="bg">
       <div className="_container pt-[150px] pb-[90px] grid grid-cols-[1fr_1fr] lg:pt-[100px] lg:grid-cols-[1fr] gap-5 md:pt-[60px] md:pb-[120px] sm:pb-[100px]">
@@ -35,21 +51,37 @@ export default function Form() {
             type="text"
             placeholder="your name"
             className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            value={values.name}
+            onChange={(e: any) =>
+              setValues({ ...values, name: e.target.value })
+            }
           />
           <input
             type="email"
             placeholder="your e-mail"
             className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            value={values.email}
+            onChange={(e: any) =>
+              setValues({ ...values, email: e.target.value })
+            }
           />
           <input
             type="text"
             placeholder="subject"
             className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            value={values.subject}
+            onChange={(e: any) =>
+              setValues({ ...values, subject: e.target.value })
+            }
           />
           <input
             type="text"
             placeholder="type your message here"
             className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            value={values.typeMessage}
+            onChange={(e: any) =>
+              setValues({ ...values, typeMessage: e.target.value })
+            }
           />
           <div className="flex justify-between items-center sm:flex-col sm:gap-5 sm:items-end">
             <p className="font-medium text-[15px] leading-[157%] text-[#929298] sm:text-right">
@@ -58,7 +90,14 @@ export default function Form() {
                 the Privacy Policy
               </a>
             </p>
-            <Button text="SEND" className="w-[185px]" />
+            <Button
+              text="SEND"
+              className="w-[185px]"
+              onClick={(e) => {
+                e.preventDefault();
+                onSubmin();
+              }}
+            />
           </div>
         </form>
       </div>
