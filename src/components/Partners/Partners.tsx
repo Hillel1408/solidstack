@@ -20,7 +20,7 @@ export default function Partners() {
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <div className="flex gap-[75px] items-center lg:gap-[63px] lg:mx-auto md:overflow-auto md:pb-1 md:gap-[43px] sm:gap-[23px]">
+        <div className="flex gap-[75px] items-center lg:gap-[63px] lg:mx-auto md:overflow-auto md:pb-1 md:gap-[43px] sm:gap-[10px]">
           <span className="text-[15px] leading-[96%] uppercase text-white lg:text-[11px] md:hidden">
             our clients:
           </span>
