@@ -33,7 +33,7 @@
   .animation-2:before {
     animation-name: enter-line;
     animation-duration: 0.8s;
-    animation-delay: 0.7s;
+    animation-delay: 0.51s;
     transform-origin: left;
   }
 }

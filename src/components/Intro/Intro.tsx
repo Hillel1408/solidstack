@@ -1,7 +1,7 @@
 export default function Intro() {
   return (
     <div className="bg pt-[471px] pb-[443px] lg:pt-[325px] lg:pb-[331px] md:py-[200px] sm:py-[170px]">
-      <div className="_container flex justify-center flex-col gap-[20px] items-center ld:gap-[18px] md:gap-[16px] sm:gap-[10px] sm:items-start">
+      <div className="_container flex justify-center flex-col gap-[20px] items-center text-center ld:gap-[18px] md:gap-[16px] sm:gap-[10px] sm:items-start sm:text-left">
         <div className="overflow-hidden pb-[10px]">
           <h2 className="animation-1 font-medium text-[55px] leading-[80%] uppercase text-[#929298] lg:text-[41px] md:text-[35px] sm:text-[31px]">
             engineered{" "}
