@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { Observer } from "@/components";
 import Image from "next/image";
 
 export default function WhatWeDo() {
@@ -28,20 +29,6 @@ export default function WhatWeDo() {
     },
   ];
 
-  const myRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && myRef.current) {
-          myRef.current.classList.add("!translate-y-[0]");
-          return;
-        }
-      });
-    });
-    myRef.current && observer.observe(myRef.current);
-  }, []);
-
   return (
     <div className="py-[152px] lg:py-[100px] md:py-[50px]">
       <div className="_container">
@@ -49,33 +36,29 @@ export default function WhatWeDo() {
           <span className="text-[#1a1b1d] underline">WHAT</span>
           <span className="text-[#929298]">WE DO</span>
         </h2>
-        <div
-          ref={myRef}
-          className="grid gap-[66px] grid-cols-[1fr_1fr_1fr] duration-1000 translate-y-[120%] lg:gap-[60px] md:grid-cols-[1fr_1fr] sm:grid-cols-[1fr]"
-        >
+        <div className="grid gap-[66px] grid-cols-[1fr_1fr_1fr] lg:gap-[60px] md:grid-cols-[1fr_1fr] sm:grid-cols-[1fr]">
           {list.map((item, index) => (
-            <div
-              key={index}
-              className="grid gap-5 grid-cols-[1fr_215px] lg:grid-cols-[1fr] sm:grid-cols-[140px_1fr] sm:gap-2 sm:items-start"
-            >
-              <div className="bg-[linear-gradient(356deg,#ffa8a3_0%,#ff291c_73%,#ff291c_100%)] py-[17px] px-5 lg:max-w-[193px] sm:min-h-[134px] sm:p-2">
-                <Image
-                  src={`/img/${item.icon}`}
-                  width={item.width}
-                  height={item.height}
-                  alt=""
-                  className="scale-[70%]"
-                />
+            <Observer key={index}>
+              <div className="grid gap-5 grid-cols-[1fr_215px] lg:grid-cols-[1fr] sm:grid-cols-[140px_1fr] sm:gap-2 sm:items-start">
+                <div className="bg-[linear-gradient(356deg,#ffa8a3_0%,#ff291c_73%,#ff291c_100%)] py-[17px] px-5 lg:max-w-[193px] sm:min-h-[134px] sm:p-2">
+                  <Image
+                    src={`/img/${item.icon}`}
+                    width={item.width}
+                    height={item.height}
+                    alt=""
+                    className="scale-[70%]"
+                  />
+                </div>
+                <div className="flex flex-col gap-4 sm:gap-2">
+                  <span className="font-medium text-[24px] leading-[183%] uppercase text-[#000] lg:text-[20px] md:text-[18px] sm:leading-[170%]">
+                    {item.title}
+                  </span>
+                  <p className="font-medium text-[15px] leading-[160%] text-[#929298]">
+                    {item.text}
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col gap-4 sm:gap-2">
-                <span className="font-medium text-[24px] leading-[183%] uppercase text-[#000] lg:text-[20px] md:text-[18px] sm:leading-[170%]">
-                  {item.title}
-                </span>
-                <p className="font-medium text-[15px] leading-[160%] text-[#929298]">
-                  {item.text}
-                </p>
-              </div>
-            </div>
+            </Observer>
           ))}
         </div>
       </div>

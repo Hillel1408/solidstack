@@ -11,6 +11,7 @@ import Partners from "@/components/Partners/Partners";
 import WhyWeDoIt from "@/components/WhyWeDoIt/WhyWeDoIt";
 import CoordinatesButton from "@/components/CoordinatesButton/CoordinatesButton";
 import Loader from "@/components/Loader/Loader";
+import Observer from "@/components/Observer/Observer";
 
 export {
   Header,
@@ -26,4 +27,5 @@ export {
   WhyWeDoIt,
   CoordinatesButton,
   Loader,
+  Observer,
 };
