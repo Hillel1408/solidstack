@@ -10,6 +10,7 @@ import Intro from "@/components/Intro/Intro";
 import Partners from "@/components/Partners/Partners";
 import WhyWeDoIt from "@/components/WhyWeDoIt/WhyWeDoIt";
 import CoordinatesButton from "@/components/CoordinatesButton/CoordinatesButton";
+import Loader from "@/components/Loader/Loader";
 
 export {
   Header,
@@ -24,4 +25,5 @@ export {
   Partners,
   WhyWeDoIt,
   CoordinatesButton,
+  Loader,
 };

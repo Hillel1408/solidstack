@@ -1,13 +1,39 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import { CoordinatesButton, Button } from "@/components/";
 import { useWindowSize } from "@/hooks/windowSize";
 
 export default function WhyWeDoIt() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [translateValue, setTranslateValue] = useState(-23.07);
+
   const size = useWindowSize();
 
   const myRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    let index = 115;
+    let del = 30;
+
+    if (size.width && size.width < 1440) {
+      index = 105;
+    }
+
+    setTranslateValue(-(scrollPosition / del) + index);
+  }, [scrollPosition]);
 
   return (
     <div ref={myRef} className="bg-[#000] overflow-hidden relative">
@@ -37,15 +63,22 @@ export default function WhyWeDoIt() {
             />
           )}
         </div>
-        <video
-          muted
-          loop
-          autoPlay
-          playsInline
-          src="video/video-2.mp4"
-          className="absolute -left-[300px] top-[340px] lg:top-[330px] md:left-0 md:right-0 md:top-[490px] sm:top-[590px] md:scale-[170%] sm:scale-[260%]"
-        ></video>
+        {/* style={{ transform: `translate(0%, ${translateValue}%)` }} */}
+        <div
+          style={{ transform: `translate(0%, ${translateValue}%)` }}
+          className="absolute -left-[300px] top-[340px] lg:top-[330px] md:left-0 md:right-0 md:top-[490px] sm:top-[590px]"
+        >
+          <video
+            muted
+            loop
+            autoPlay
+            playsInline
+            src="video/video-2.mp4"
+            className="md:scale-[170%] sm:scale-[260%]"
+          ></video>
+        </div>
       </div>
+
       {size.width && size.width > 768 && (
         <CoordinatesButton myRef={myRef} href="#" />
       )}
