@@ -9,6 +9,7 @@ import Team from "@/components/Team/Team";
 import Intro from "@/components/Intro/Intro";
 import Partners from "@/components/Partners/Partners";
 import WhyWeDoIt from "@/components/WhyWeDoIt/WhyWeDoIt";
+import CoordinatesButton from "@/components/CoordinatesButton/CoordinatesButton";
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   Intro,
   Partners,
   WhyWeDoIt,
+  CoordinatesButton,
 };

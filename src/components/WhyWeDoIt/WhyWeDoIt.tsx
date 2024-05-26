@@ -1,6 +1,16 @@
+"use client";
+
+import { useRef } from "react";
+import { CoordinatesButton, Button } from "@/components/";
+import { useWindowSize } from "@/hooks/windowSize";
+
 export default function WhyWeDoIt() {
+  const size = useWindowSize();
+
+  const myRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div className="bg-[#000] overflow-hidden">
+    <div ref={myRef} className="bg-[#000] overflow-hidden relative">
       <div className="_container relative pt-[100px] pb-[337px] lg:pb-[220px] md:pt-[60px] md:pb-[362px] sm:pt-[41px] sm:pb-[335px]">
         <h2 className="flex gap-[22px] uppercase font-medium text-[45px] leading-[98%] mb-[70px] lg:text-[41px] md:text-[27px]">
           <span className="text-white underline">WHAT</span>
@@ -20,6 +30,12 @@ export default function WhyWeDoIt() {
           <h3 className="font-medium text-[41px] uppercase text-white ml-[680px] lg:ml-0 md:text-[35px]">
             <span className="text-[#929298]">DELIVER HOW WE</span> KNOW BEST
           </h3>
+          {size.width && size.width <= 768 && (
+            <Button
+              text="READY TO MAKE SOMETHING GREAT?"
+              className="mt-[50px] sm:mt-[38px]"
+            />
+          )}
         </div>
         <video
           muted
@@ -30,6 +46,9 @@ export default function WhyWeDoIt() {
           className="absolute -left-[300px] top-[340px] lg:top-[330px] md:left-0 md:right-0 md:top-[490px] sm:top-[590px] md:scale-[170%] sm:scale-[260%]"
         ></video>
       </div>
+      {size.width && size.width > 768 && (
+        <CoordinatesButton myRef={myRef} href="#" />
+      )}
     </div>
   );
 }
