@@ -48,6 +48,9 @@ const config: Config = {
             padding: "0 15px",
           },
         },
+        ".my-blur": {
+          backdropFilter: "blur(102.50411987304688px)",
+        },
       });
     }),
   ],

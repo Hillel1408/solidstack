@@ -10,7 +10,7 @@ export default function Header() {
   ];
 
   return (
-    <div className="absolute left-0 right-0 py-5 min-w-[375px]">
+    <div className="absolute left-0 right-0 py-5 min-w-[375px] z-10">
       <div className="_container flex items-center justify-between gap-4">
         <Logo className="text-[#1a1b1d]" />
         <ul className="flex flex-wrap gap-y-2 items-center font-medium text-[17px] leading-[94%] tracking-[-0.01em] text-[#1a1b1d] lg:text-[15px] md:hidden">
