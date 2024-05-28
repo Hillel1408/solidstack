@@ -50,7 +50,7 @@ export default function Form() {
           <input
             type="text"
             placeholder="your name"
-            className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            className="outline-none bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
             value={values.name}
             onChange={(e: any) =>
               setValues({ ...values, name: e.target.value })
@@ -59,7 +59,7 @@ export default function Form() {
           <input
             type="email"
             placeholder="your e-mail"
-            className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            className="outline-none bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
             value={values.email}
             onChange={(e: any) =>
               setValues({ ...values, email: e.target.value })
@@ -68,7 +68,7 @@ export default function Form() {
           <input
             type="text"
             placeholder="subject"
-            className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            className="outline-none bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
             value={values.subject}
             onChange={(e: any) =>
               setValues({ ...values, subject: e.target.value })
@@ -77,7 +77,7 @@ export default function Form() {
           <input
             type="text"
             placeholder="type your message here"
-            className="bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
+            className="outline-none bg-transparent h-[32px] border-b border-[#000] placeholder:font-medium placeholder:text-[17px] placeholder:leading-[141%] placeholder:text-[#929298]"
             value={values.typeMessage}
             onChange={(e: any) =>
               setValues({ ...values, typeMessage: e.target.value })

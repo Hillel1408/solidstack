@@ -16,7 +16,10 @@ export default function Header() {
         <ul className="flex flex-wrap gap-y-2 items-center font-medium text-[17px] leading-[94%] tracking-[-0.01em] text-[#1a1b1d] lg:text-[15px] md:hidden">
           {list.map((item, index) => (
             <li key={index}>
-              <a href="#" className="px-6 py-3 lg:px-3 lg:py-2">
+              <a
+                href="#"
+                className="px-6 py-3 duration-200 hover:underline lg:px-3 lg:py-2"
+              >
                 {item.title}
               </a>
             </li>
