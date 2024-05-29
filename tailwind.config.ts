@@ -22,6 +22,9 @@ const config: Config = {
         "*, *:before, *:after": {
           "-webkitTapHighlightColor": "transparent",
         },
+        html: {
+          fontSize: "0.6944vw",
+        },
         body: {
           minWidth: "375px",
           display: "flex",
@@ -29,6 +32,9 @@ const config: Config = {
           minHeight: "100vh",
           fontFamily: '"Inter", sans-serif',
           lineHeight: "1",
+        },
+        "body.lock": {
+          overflow: "hidden",
         },
         main: {
           flex: "1 1 auto",
@@ -41,6 +47,11 @@ const config: Config = {
         "@media (max-width: 1440px)": {
           "._container": {
             padding: "0 20px",
+          },
+        },
+        "@media (max-width: 1023px)": {
+          html: {
+            fontSize: "10px",
           },
         },
         "@media (max-width: 500px)": {

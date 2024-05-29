@@ -12,6 +12,10 @@ import WhyWeDoIt from "@/components/WhyWeDoIt/WhyWeDoIt";
 import CoordinatesButton from "@/components/CoordinatesButton/CoordinatesButton";
 import Loader from "@/components/Loader/Loader";
 import Observer from "@/components/Observer/Observer";
+import LayoutModal from "@/components/LayoutModal/LayoutModal";
+import Input from "@/components/Input/Input";
+import RequestModal from "@/components/RequestModal/RequestModal";
+import Transition from "@/components/Transition/Transition";
 
 export {
   Header,
@@ -28,4 +32,8 @@ export {
   CoordinatesButton,
   Loader,
   Observer,
+  LayoutModal,
+  Input,
+  RequestModal,
+  Transition,
 };
