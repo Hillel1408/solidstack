@@ -9,14 +9,14 @@ export default function WeDoIt() {
       text: "Integrating key features across industries to bring ideas to life",
     },
     {
-      img: "img-2.png",
-      title: "scatter",
-      text: "Architecting resilient frameworks for efficient, scalable digital systems",
-    },
-    {
       img: "img-3.png",
       title: "Western university",
       text: "Integrating key features across industries to",
+    },
+    {
+      img: "img-2.png",
+      title: "scatter",
+      text: "Architecting resilient frameworks for efficient, scalable digital systems",
     },
   ];
 
@@ -29,7 +29,7 @@ export default function WeDoIt() {
         </h2>
         <div className="flex flex-col gap-10 overflow-hidden lg:gap-[54px]">
           {list.map((item, index) => (
-            <Observer
+            <div
               key={index}
               className={classNames(
                 "sm:w-full",
@@ -42,21 +42,25 @@ export default function WeDoIt() {
                   "grid gap-[33px] grid-cols-[288px_335px] md:grid-cols-[220px_1fr] sm:grid-cols-[1fr]"
                 )}
               >
-                <img
-                  src={`/img/${item.img}`}
-                  className="w-[288px] h-[148px] md:w-[220px] md:h-[113px] sm:w-full sm:h-auto"
-                  alt=""
-                />
-                <div className="-translate-y-[1px]">
-                  <h3 className="font-medium text-[55px] leading-[90%] uppercase text-[#000] mb-[22px] md:text-[30px]">
-                    {item.title}
-                  </h3>
-                  <p className="font-medium text-[20px] leading-[120%] uppercase text-[#000] md:text-[12px]">
-                    {item.text}
-                  </p>
-                </div>
+                <Observer>
+                  <img
+                    src={`/img/${item.img}`}
+                    className="w-[288px] h-[148px] md:w-[220px] md:h-[113px] sm:w-full sm:h-auto"
+                    alt=""
+                  />
+                </Observer>
+                <Observer>
+                  <div className="-translate-y-[1px]">
+                    <h3 className="font-medium text-[55px] leading-[90%] uppercase text-[#000] mb-[22px] md:text-[30px]">
+                      {item.title}
+                    </h3>
+                    <p className="font-medium text-[20px] leading-[120%] uppercase text-[#000] md:text-[12px]">
+                      {item.text}
+                    </p>
+                  </div>
+                </Observer>
               </div>
-            </Observer>
+            </div>
           ))}
         </div>
       </div>
