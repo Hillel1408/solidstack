@@ -38,14 +38,14 @@ export default function WhatWeDo() {
         <div className="grid gap-[66px] grid-cols-[1fr_1fr_1fr] overflow-hidden lg:gap-[60px] md:grid-cols-[1fr_1fr] sm:grid-cols-[1fr]">
           {list.map((item, index) => (
             <Observer key={index}>
-              <div className="grid gap-5 grid-cols-[1fr_215px] lg:grid-cols-[1fr] sm:grid-cols-[140px_1fr] sm:gap-2 sm:items-start">
-                <div className="bg-[linear-gradient(356deg,#ffa8a3_0%,#ff291c_73%,#ff291c_100%)] py-[17px] px-5 lg:max-w-[193px] sm:min-h-[134px] sm:p-2">
+              <div className="grid gap-5 grid-cols-[1fr_215px] items-start lg:grid-cols-[1fr] sm:grid-cols-[140px_1fr] sm:gap-2 sm:items-start">
+                <div className="bg-[linear-gradient(356deg,#ffa8a3_0%,#ff291c_73%,#ff291c_100%)] py-[17px] px-5 min-h-[146px] lg:max-w-[193px] md:min-h-[134px] sm:p-2">
                   <Image
                     src={`/img/${item.icon}`}
                     width={item.width}
                     height={item.height}
                     alt=""
-                    className="scale-[70%]"
+                    className="sm:scale-[70%]"
                   />
                 </div>
                 <div className="flex flex-col gap-4 sm:gap-2">

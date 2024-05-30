@@ -21,7 +21,6 @@ export default function Home() {
       {isVisbleContent ? (
         <>
           <Intro />
-          <Partners />
           <WhatWeDo />
           <WeDoIt />
           <Team />

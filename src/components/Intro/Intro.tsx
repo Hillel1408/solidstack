@@ -1,3 +1,5 @@
+import { Partners } from "@/components";
+
 export default function Intro() {
   return (
     <div className="bg h-[100vh] flex items-center justify-center relative">
@@ -28,7 +30,9 @@ export default function Intro() {
           </p>
         </div>
       </div>
-      <div className="absolute top-0 bottom-0 left-0 right-0"></div>
+      <div className="absolute bottom-0 left-0 right-0">
+        <Partners />
+      </div>
     </div>
   );
 }
